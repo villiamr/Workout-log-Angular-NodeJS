@@ -1,0 +1,25 @@
+mat-toolbar {
+    background-color: #344152;
+    
+}
+
+.dots {
+    font-size: 3rem;
+    color: white;
+}
+
+span {
+    color: white;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 3rem;
+
+}
+
+button > mat-icon {
+    color: #344152;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+}
+

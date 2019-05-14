@@ -1,0 +1,11 @@
+<mat-toolbar>
+  <span>UMIRIN'BRAH?</span>
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item routerLink="/"><mat-icon>home</mat-icon>Hem</button>
+    <button mat-menu-item routerLink="/get"><mat-icon>library_books</mat-icon>Träningslogg</button>
+    <button mat-menu-item routerLink="/create"><mat-icon>add</mat-icon>Skapa träningspass</button>
+  </mat-menu>
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon class="dots">more_vert</mat-icon>
+  </button>
+</mat-toolbar>

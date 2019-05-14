@@ -1,0 +1,41 @@
+<div class="jumbotron mx-auto text-center">
+    
+    <h1>Skapa träningspass</h1>
+                <!--Selectmenyn-->
+                <div [formGroup]="workoutForm">
+          <mat-form-field>
+            <mat-label>Övning</mat-label>
+            <mat-select name="workout" formControlName="name">
+            <mat-option [value]="workout.value" *ngFor="let workout of workouts" (change)="updateProfile($event.target.value)">
+                {{workout.viewValue}}
+              </mat-option>
+          </mat-select>
+          </mat-form-field>
+        
+
+  <!--Fälten för seten-->
+  <div formArrayName="sets">
+    <div *ngFor="let item of Sets.controls; let setIndex=index" [formGroupName]="setIndex">
+      <mat-card>
+      <mat-form-field>
+    <input type="text" formControlName="weight" matInput placeholder="Set {{setIndex+1}}: Vikt">
+  </mat-form-field>
+  <mat-form-field>
+      <input type="text" formControlName="rep" matInput placeholder="Antal Repetitioner">
+    </mat-form-field>
+  </mat-card>
+  </div>
+      <button mat-raised-button (click)="addSet()">Nytt set</button>
+      <button mat-raised-button (click)="onSubmit()">Spara träningspass</button>
+  </div>
+
+  
+
+  
+</div>  
+</div>
+
+
+
+ 
+ 

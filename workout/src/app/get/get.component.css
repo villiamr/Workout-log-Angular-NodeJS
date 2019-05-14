@@ -1,0 +1,36 @@
+table {
+    margin-top: 6rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+td {
+    border-color: #344152 !important;
+}
+
+tr:hover {
+    color: white !important;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    background-color: #344152;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+td {
+    text-transform: uppercase;
+}
+
+.mat-expansion-panel {
+    background-color: #344152;
+}
+
+mat-panel-title {
+    color: white !important;
+}
