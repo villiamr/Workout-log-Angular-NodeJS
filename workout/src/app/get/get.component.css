@@ -15,10 +15,11 @@ tr:hover {
 .jumbotron {
     margin-bottom: 0;
     background-color: #344152;
+    border-radius: 0;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.5em;
     font-family: 'Poppins', sans-serif;
     color: white;
 }
@@ -32,5 +33,9 @@ td {
 }
 
 mat-panel-title {
+    color: white !important;
+}
+
+::ng-deep .mat-list-item {
     color: white !important;
 }

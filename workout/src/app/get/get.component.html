@@ -1,32 +1,38 @@
 <div class="jumbotron">
   <h1 class="text-center">Träningslogg</h1>
-<table class="table table-hover text-center shadow-lg">
-    <thead>
-    </thead>
-  
+<table class="table table-hover shadow-lg ">
     <tbody>
-        <tr *ngFor="let workout of workouts">
-            <td>
+        <tr *ngFor="let workout of workouts" >
                 <mat-accordion>
                     <mat-expansion-panel>
                       <mat-expansion-panel-header>
+                        <td>
                         <mat-panel-title>
                           {{ workout.name }}
                         </mat-panel-title>
+                      </td>
+                      <td>
                         <mat-panel-title>
                             {{ workout.sets.length }}
                           </mat-panel-title>
+                        </td>
+                        <td>
                           <mat-panel-title>
                               {{ workout.date }}
                             </mat-panel-title>
+                          </td>
+                          
                       </mat-expansion-panel-header>
-                      <p>{{workout.sets}}</p>
+                      <mat-divider></mat-divider>
+                        <mat-list role="list" *ngFor="let set of workout.sets; let i = index">
+                            <mat-list-item role="listitem">Set {{i+1}}: {{set.weight}}x{{set.rep}}</mat-list-item>
+                          </mat-list>
+                    
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true"
                                          (closed)="panelOpenState = false">
                     </mat-expansion-panel>
                   </mat-accordion>
-            </td>
         </tr>
     </tbody>
   </table>
