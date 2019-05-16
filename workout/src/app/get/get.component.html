@@ -7,19 +7,13 @@
                     <mat-expansion-panel>
                       <mat-expansion-panel-header>
                         <td>
-                        <mat-panel-title>
-                          {{ workout.name }}
-                        </mat-panel-title>
+                        <mat-panel-title>{{ workout.name }}</mat-panel-title>
                       </td>
                       <td>
-                        <mat-panel-title>
-                            {{ workout.sets.length }}
-                          </mat-panel-title>
+                        <mat-panel-title>{{ workout.sets.length }}</mat-panel-title>
                         </td>
                         <td>
-                          <mat-panel-title>
-                              {{ workout.date }}
-                            </mat-panel-title>
+                          <mat-panel-title>{{ myDate | date:'yyyy-MM-dd' }}</mat-panel-title>
                           </td>
                           
                       </mat-expansion-panel-header>
